@@ -9,13 +9,13 @@
   <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
   </head>
 <body style="margin : 0px; overflow: hidden">
+<!-- こっからA-Frame -->
 <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
 <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+<!-- オブジェクトファイルとマテリアルファイルを読み込む -->
   <a-assets>
-    <!-- 3Dモデルをプリロード -->
-    <a-asset-item id="monkey" src="/monkey_red.obj"></a-asset-item>
-        <!-- マテリアルのロード -->
-    <a-asset-item id="monkey" src="/monkey_red.mtl"></a-asset-item>
+    <a-asset-item id="obj" src="/monkey_red.obj"></a-asset-item>
+    <a-asset-item id="mtl" src="/monkey_red.mtl"></a-asset-item>
   </a-assets>
   <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
   <a-marker type="pattern" url="/pattern-marker.patt">
@@ -24,5 +24,6 @@
   </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
+  <!-- ここまででA-Frameおわり -->
 </body>
 </html>

@@ -11,10 +11,11 @@
     <a-assets>
         <a-asset-item id="obj" src="/sushi_3dprint_160815.obj"></a-asset-item>
         <a-asset-item id="mtl" src="/sushi_3dprint_160815.mtl"></a-asset-item>
+        <a-asset-item id="mtl" src="/sushi_160706.jpg"></a-asset-item>
     </a-assets>
 　　<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
     <a-marker type="pattern" url="/pattern-marker.patt">
-        <a-entity obj-model="#sample" src="#obj" mtl="#mtl" scale="0.5 0.5 0.5"></a-entity>
+        <a-entity obj-model="#sample" src="#obj" mtl="#mtl" src="#jpg" scale="0.5 0.5 0.5"></a-entity>
     </a-marker>
     <!-- arなのでこんな感じでカメラが必要らしい。 -->
     <a-entity camera></a-entity>

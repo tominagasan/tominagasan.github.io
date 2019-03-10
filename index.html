@@ -1,4 +1,3 @@
-
 <!doctype HTML>
 <html>
   <head>
@@ -15,14 +14,11 @@
   <a-assets>
     <!-- 3Dモデルをプリロード -->
     <a-asset-item id="monkey" src="/monkey.glb"></a-asset-item>
-    <!-- マテリアルのロード -->
-    <a-asset-item id="material" src="/XXX.mtl"></a-asset-item>
- </a-assets>
+  </a-assets>
   <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
   <a-marker type="pattern" url="/pattern-marker.patt">
     <!-- idを指定して3Dモデルを表示 -->
-    <a-entity gltf-model="#monkey" scale="0.3 0.3 0.3" animation-mixer></a-entity>  
-
+    <a-entity gltf-model="#monkey" scale="0.8 0.8 0.8" animation-mixer></a-entity>
   </a-marker>
   <a-entity camera></a-entity>
 </a-scene>

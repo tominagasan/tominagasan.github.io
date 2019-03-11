@@ -11,13 +11,14 @@
 <body style="margin : 0px; overflow: hidden">
 <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
 <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+  <a-assets>
     <!-- 3Dモデルをプリロード -->
-<a-entity gltf-model="url(https://github.com/tominagasan/tominagasan.github.io/blob/master/cream-parfait_8mm_190311.gltf)"></a-entity>
-<a-entity gltf-model="#cream-parfait_8mm_190311"></a-entity>
+    <a-asset-item id="cream-parfait_08mm_190311" src="/cream-parfait_08mm_190311.glb"></a-asset-item>
+  </a-assets>
   <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
   <a-marker type="pattern" url="/pattern-marker.patt">
     <!-- idを指定して3Dモデルを表示 -->
-    <a-entity gltf-model="#monkey" scale="0.8 0.8 0.8" animation-mixer></a-entity>
+    <a-entity gltf-model="#cream-parfait_08mm_190311" scale="0.8 0.8 0.8" animation-mixer></a-entity>
   </a-marker>
   <a-entity camera></a-entity>
 </a-scene>

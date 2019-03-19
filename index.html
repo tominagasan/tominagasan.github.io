@@ -11,16 +11,19 @@
 <body style="margin : 0px; overflow: hidden">
 <!-- AR.jsのデバックとA-FrameのVRボタンを非表示 -->
 <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
-<!-- 3Dモデルをプリロード -->
-　<a-assets>
-　　<a-asset-item id="cream-obj" src="/cream-parfait_04.obj"></a-asset-item>
-　　<a-asset-item id="cream-mtl" src="/cream-parfait_04.mtl"></a-asset-item>
-　</a-assets>
-<!-- idを指定して3Dモデルを表示 -->
-　<a-entity id="cream" obj-model="obj:#cream-obj; mtl:#cream-mtl;" position="0 0 0" scale="0.1 0.1 0.1" rotation="0 0 0"></a-entity>
+  <a-assets>
+    <!-- 3Dモデルをプリロード -->
+    <a-asset-item id="cream-parfait" src="/cream-parfait_lowpoly.glb"></a-asset-item>
+  </a-assets>
   <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
-  <a-marker type="pattern" url="/pattern-marker.patt"></a-marker>
+  <a-marker type="pattern" url="/pattern-marker.patt">
+    <!-- idを指定して3Dモデルを表示 -->
+    <a-entity gltf-model="#cream-parfait" position="0 0 0" scale="1.0 1.0 1.0" animation-mixer></a-entity>
+  </a-marker>
   <a-entity camera></a-entity>
 </a-scene>
+    <script>
+    document.querySelector("a-scene").renderer.gammaInput = true;
+  </script>
 </body>
 </html>
